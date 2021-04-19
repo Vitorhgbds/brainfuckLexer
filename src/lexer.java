@@ -82,6 +82,7 @@ public class lexer {
     private void openBracketRule(String word){
         if(memory[mp] == 0){
             for(; word.charAt(pp) != ']'; pp++);
+            pp++;
         }else pp++;
     }
 
@@ -93,7 +94,7 @@ public class lexer {
 
     private void dotRule() throws IOException{
         char c = (char)memory[mp];
-        OFFile.write(c);   
+        OFFile.write(c);  
     }
 
     private void dolarRule() throws IOException{
