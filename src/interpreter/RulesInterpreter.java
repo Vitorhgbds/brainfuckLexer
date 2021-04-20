@@ -1,5 +1,5 @@
 package interpreter;
-import readers.fileModifier;
+import readers.FileModifier;
 
 public class RulesInterpreter {
     private Vm vm;
@@ -39,7 +39,7 @@ public class RulesInterpreter {
     public void dotRule(){
         char c = (char)vm.getMemory()[vm.mp];
         //int asciiCode = vm.getMemory()[vm.mp];
-        fileModifier.write("OF.txt", c + "");
+        FileModifier.write("OF.txt", c + "");
         vm.pp++;
     }
 
@@ -48,7 +48,7 @@ public class RulesInterpreter {
         for(int i = 0; i < vm.getMemory().length;i++){
             msg.append("" + vm.getMemory()[i]);
         }
-        fileModifier.write("OF.txt",msg.toString());
+        FileModifier.write("OF.txt",msg.toString());
         vm.pp++;
     }
 }

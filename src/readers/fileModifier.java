@@ -3,15 +3,16 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 
-public class fileModifier {
+public class FileModifier {
     
     public static String read(String fileName){
         String content = "";
         try {
             FileReader file = new FileReader("src/readers/" + fileName);
             BufferedReader bf = new BufferedReader(file);
-            if(bf.ready()){
-                content = bf.readLine();
+            
+            while(bf.ready()){
+                content += bf.readLine() + "\n";
             }
             bf.close();
         } catch (Exception e) {

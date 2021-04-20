@@ -1,7 +1,7 @@
 package interpreter;
 import java.util.Queue;
 
-import readers.fileModifier;
+import readers.FileModifier;
 
 public class Vm {
     //memoria
@@ -23,9 +23,9 @@ public class Vm {
         memory = new int[1000];
         rules = new RulesInterpreter(this);
 
-        sourceProgram = fileModifier.read("SOURCE.txt");
+        sourceProgram = FileModifier.read("SOURCE.txt");
 
-        String in = fileModifier.read("IF.txt");
+        String in = FileModifier.read("IF.txt");
         for (int i = 0; i < in.length(); i++) {
             input.add(in.charAt(i));
         }
@@ -40,7 +40,7 @@ public class Vm {
         if(!testSyntax()){
             return false;
         }
-        fileModifier.clean("OF.txt");
+        FileModifier.clean("OF.txt");
         while(pp < sourceProgram.length()){
             char command = sourceProgram.charAt(pp);
             interpretCommand(command);
