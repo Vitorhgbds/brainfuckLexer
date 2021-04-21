@@ -1,4 +1,5 @@
 package interpreter;
+import java.util.LinkedList;
 import java.util.Queue;
 
 import readers.FileModifier;
@@ -22,6 +23,7 @@ public class Vm {
         pp = 0;
         memory = new int[1000];
         rules = new RulesInterpreter(this);
+        input = new LinkedList<>();
 
         sourceProgram = FileModifier.read("SOURCE.txt");
 
