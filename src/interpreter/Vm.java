@@ -25,16 +25,11 @@ public class Vm {
         rules = new RulesInterpreter(this);
         input = new LinkedList<>();
 
-        sourceProgram = FileModifier.read("SOURCE.txt");
-
-        String in = FileModifier.read("IF.txt");
-        for (int i = 0; i < in.length(); i++) {
-            input.add(in.charAt(i));
-        }
-
     }
 
     public boolean runProgram(){
+        updateInput();
+        updateSource();
         if(sourceProgram == ""){
             System.err.println("Erro: Programa vazio (SOURCE.txt)");
             return false;
@@ -43,9 +38,23 @@ public class Vm {
             return false;
         }
         FileModifier.clean("OF.txt");
+        
         while(pp < sourceProgram.length()){
             char command = sourceProgram.charAt(pp);
             interpretCommand(command);
+        }
+        return true;
+    }
+
+    private boolean updateSource(){
+        sourceProgram = FileModifier.read("SOURCE.txt");
+        return true;
+    }
+
+    private boolean updateInput(){
+        String in = FileModifier.read("IF.txt");
+        for (int i = 0; i < in.length(); i++) {
+            input.add(in.charAt(i));
         }
         return true;
     }
