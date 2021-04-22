@@ -1,5 +1,12 @@
 package interpreter;
+
+/*
+    Nomes: Luiz Eduardo Reis, Vitor Hugo, Willian Albeche, Gabriel Velloso
+*/ 
+
 import readers.FileModifier;
+
+
 
 public class RulesInterpreter {
     private Vm vm;

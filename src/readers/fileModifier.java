@@ -1,7 +1,11 @@
 package readers;
+/*
+    Nomes: Luiz Eduardo Reis, Vitor Hugo, Willian Albeche, Gabriel Velloso
+*/ 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
+
 
 public class FileModifier {
     

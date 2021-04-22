@@ -1,4 +1,8 @@
+/*
+    Nomes: Luiz Eduardo Reis, Vitor Hugo, Willian Albeche, Gabriel Velloso
+*/ 
 import java.util.Scanner;
+
 
 import interpreter.Vm;
 import readers.FileModifier;

@@ -1,4 +1,9 @@
 package interpreter;
+
+/*
+    Nomes: Luiz Eduardo Reis, Vitor Hugo, Willian Albeche, Gabriel Velloso
+*/ 
+
 import java.util.LinkedList;
 import java.util.Queue;
 
